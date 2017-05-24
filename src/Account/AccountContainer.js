@@ -46,15 +46,14 @@ const withFetcher = branch(
 )
 
 const mapAEMProps = (props) => {
-  const mappedProps = {AEM : {}};
-  for(let prop in props) {
-    if(prop.substr(0, 3) === 'aem'){
-      mappedProps.AEM[prop.substring(3)] = props[prop];
+  return Object.keys(props).reduce((acc, prop) => {
+    if (prop.includes('aem')) {
+      acc.AEM[prop.replace('aem', '')] = props[prop];
     } else {
-      mappedProps[prop] = props[prop];
+      acc[prop] = props[prop];
     }
-  }
-  return mappedProps;
+    return acc;
+  }, {AEM: {}});
 }
 
 const AccountContainer = compose(
