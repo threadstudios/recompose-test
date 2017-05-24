@@ -1,0 +1,24 @@
+{
+  "name": "recompose-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "enzyme": "^2.8.2",
+    "express": "^4.15.3",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "recompose": "^0.23.4",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
